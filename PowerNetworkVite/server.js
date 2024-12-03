@@ -34,7 +34,7 @@ app.post('/api/analyze', async (req, res) => {
     const { query } = req.body;
     
     const completion = await client.chat.completions.create({
-      model: "llama-3.2-90b-text-preview",
+      model: "llama-3.1-70b-specdec",
       messages: [
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user", content: `Analyze the network connections for: ${query}` }
