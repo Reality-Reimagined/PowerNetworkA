@@ -53,7 +53,7 @@ class NetworkAnalyzerAPI {
   async searchPerson(query: string): Promise<NetworkAnalysis> {
     try {
       const completion = await client.chat.completions.create({
-        model: "llama-3.2-90b-text-preview",
+        model: "llama-3.1-70b-specdec",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
           { role: "user", content: `Analyze the network connections for: ${query}` }
